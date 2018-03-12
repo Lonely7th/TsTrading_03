@@ -9,7 +9,7 @@ TS模型的一个策略(03)
     最新版本
     ------------------
     最新版本可以在GitHub上找到。
-    https://github.com/Lonely7th/TsDataServer/下的项目页面。
+    https://github.com/Lonely7th/TsTrading_03/下的项目页面。
 
     配置说明
     -------------
