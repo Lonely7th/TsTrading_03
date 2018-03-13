@@ -8,7 +8,7 @@ __mtime__ = '2018/1/18'
 
 
 class tkWModeBean(object):
-    def __init__(self, code, price_list, wmacd_list, diff_list, dea_list, tur_list, highest_list, open_list):
+    def __init__(self, code, price_list, wmacd_list, diff_list, dea_list, tur_list, highest_list, open_list, lowest_list):
         self.code = code
         self.price_list = price_list
         self.wmacd_list = wmacd_list
@@ -17,6 +17,7 @@ class tkWModeBean(object):
         self.tur_list = tur_list
         self.highest_list = highest_list
         self.open_list = open_list
+        self.lowest_list = lowest_list
 
     def get_code(self):
         return self.code
@@ -59,3 +60,9 @@ class tkWModeBean(object):
 
     def set_highest_list(self, highest_list):
         self.highest_list = highest_list
+
+    def get_lowest_list(self):
+        return self.lowest_list
+
+    def set_lowest_list(self, lowest_list):
+        self.lowest_list = lowest_list

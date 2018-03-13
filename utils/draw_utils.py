@@ -34,29 +34,15 @@ def draw_bar(plt, index, macd_list, macd_trend_list=list(), title='', color='g')
 
 
 # 绘制折线图
-def draw_plt(plt, index, data_list, ktrend_list=list(), title='', point1=-1, point2=-1, color="r"):
+def draw_plt(plt, index, data_list, title='', color="r"):
     plt.subplot(index)
     lable_x = np.arange(len(data_list))
     # 绘制K线
     plt.plot(lable_x, data_list, color=color, linewidth=1.0, linestyle="-")
-    # 绘制预测线
-    # plt.plot(np.arange(point2, point1+1), data_list[point2:point1+1], color="#00FF00", linewidth=1.6, linestyle="-")
-    # 绘制趋势线
-    # for item in ktrend_list:
-    #     begin = item.get_start_index()
-    #     end = item.get_end_index()+1 #保证数据连贯性
-    #     if item.get_trend() == 1:
-    #         plt.plot(lable_x[begin:end], data_list[begin:end], color="r", linewidth=1.6, linestyle="-")
-    #     elif item.get_trend() == -1:
-    #         plt.plot(lable_x[begin:end], data_list[begin:end], color="g", linewidth=1.6, linestyle="-")
-    # 绘制回测线
-    # if point != -1:
-    #     plt.plot(lable_x[point:point+10], data_list[point:point+10], color="b", linewidth=1.6, linestyle="-")
     plt.xlim(lable_x.min(), lable_x.max() * 1.1)
     plt.ylim(min(data_list) * 0.9, max(data_list) * 1.1)
     plt.title(title)
     plt.grid(True)
-
 
 
 def draw_plt_macd(plt, index, price_list, point_list, title=''):

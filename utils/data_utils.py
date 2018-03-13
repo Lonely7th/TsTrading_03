@@ -13,8 +13,8 @@ base_path = os.path.abspath(os.path.join(os.getcwd(), "..")) + "/data"
 
 
 # 读取数据
-def fun_01():
-    file_path = base_path + "/data_price_w_18"
+def fun_01(file_name):
+    file_path = base_path + "/" + file_name
     _file = open(file_path)
     tk_list = list()
     while True:
@@ -27,8 +27,9 @@ def fun_01():
         tur_list = list(reversed([float(x) for x in line.split("#")[1].strip()[1:-2].split(",")]))
         highest_list = list(reversed([float(x) for x in line.split("#")[2].strip()[1:-2].split(",")]))
         open_list = list(reversed([float(x) for x in line.split("#")[3].strip()[1:-2].split(",")]))
+        lowest_list = list(reversed([float(x) for x in line.split("#")[4].strip()[1:-2].split(",")]))
         wmacd_list, diff_list, dea_list = fun_02(price_list[:])
-        tk_bean = tkWModeBean(line[:11], price_list, wmacd_list, diff_list, dea_list, tur_list, highest_list, open_list)
+        tk_bean = tkWModeBean(line[:11], price_list, wmacd_list, diff_list, dea_list, tur_list, highest_list, open_list, lowest_list)
         tk_list.append(tk_bean)
     return tk_list
 
