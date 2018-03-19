@@ -8,7 +8,8 @@
 
 源码下载地址：[https://github.com/Lonely7th/TsTrading_03](https://github.com/Lonely7th/TsTrading_03)
 
-**回测结果展示：**![2014.png](https://upload-images.jianshu.io/upload_images/9225319-05a4b38bbeed73a1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+**回测结果展示：**
+![2014.png](https://upload-images.jianshu.io/upload_images/9225319-05a4b38bbeed73a1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ![2015.png](https://upload-images.jianshu.io/upload_images/9225319-0503425130d524f9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
@@ -57,6 +58,7 @@ file_path = base_path + "/" + file_name
     return tk_list
 ```
 ![数据样式](https://upload-images.jianshu.io/upload_images/9225319-52dedf450d13b625.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 清洗数据，执行策略前我们先对数据进行检查和清洗：
 ```
 tk.set_wmacd_list(tk.get_wmacd_list()[-error_data:])
