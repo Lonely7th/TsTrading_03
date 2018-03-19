@@ -22,7 +22,7 @@
 本次回测中我们限制了最大仓位（低于20%），你也可以修改这项限制，对于这个策略而言，增加最大仓位会使得收益率大幅提升。
 文章中会着重描述如何使用Python对策略进行回测，不会过多讨论策略的细节和优劣程度，如果你对交易模型或者量化交易感兴趣，可以与我进行交流：1003882179@qq.com
 
-#1.实现交易策略
+**1.实现交易策略**
 初始化变量：
 ```
 # 初始资金
@@ -76,7 +76,7 @@ if wmacd_list[date - 1] > 0 >= wmacd_list[date - 2] and 0.1 >= diff_list[date - 
     tur_list[date - 5:date - 1]) < tur_list[date - 1]:
         buy_list.append(index)
 ```
-#2.模拟买入和卖出操作
+**2.模拟买入和卖出操作**
 买入操作：
 ```
 def fun_buy(buy_list, date):
@@ -116,7 +116,7 @@ def fun_sell(date):
         order_rate = (balance_price-open_price)/open_price
         history_order.append(order_rate)
 ```
-#3.统计数据和绘图
+**3.统计数据和绘图**
 模拟完交易后我们对数据进行统计：
 ```
 net_rate = (history_capital[-1] - history_capital[0]) / history_capital[0]  # 计算回测结果
