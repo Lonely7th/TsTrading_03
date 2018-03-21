@@ -55,7 +55,7 @@ def fun_sell(date):
         history_order.append(order_rate)
 
 
-# 模拟购买操作
+# 模拟买入操作
 def fun_buy(buy_list, date):
     global capital_base
     # 对资金池进行均分
@@ -113,6 +113,6 @@ if __name__ == "__main__":
         print file_name, round(net_rate*100, 2), "%"
         # 开始绘图
         plt.figure(figsize=(6, 4), dpi=80)
-        draw_utils.draw_plt(plt, 211, history_capital, color="r")
-        draw_utils.draw_bar(plt, 212, history_order)
+        draw_utils.draw_plt(plt, 111, history_capital,title=str(round(net_rate*100, 2))+"%", color="r")
+        # draw_utils.draw_bar(plt, 212, history_order)
         plt.show()
